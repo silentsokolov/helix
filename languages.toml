@@ -9,6 +9,7 @@ als = { command = "als" }
 ada-language-server = { command = "ada_language_server" }
 ada-gpr-language-server = {command = "ada_language_server", args = ["--language-gpr"]}
 angular = {command = "ngserver", args = ["--stdio", "--tsProbeLocations", ".", "--ngProbeLocations", ".",]}
+asm-lsp = { command = "asm-lsp" }
 awk-language-server = { command = "awk-language-server" }
 bash-language-server = { command = "bash-language-server", args = ["start"] }
 bass = { command = "bass", args = ["--lsp"] }
@@ -3050,6 +3051,7 @@ file-types = ["asm", "S", "nasm"]
 injection-regex = "n?asm"
 comment-token = ";"
 indent = { tab-width = 8, unit = "        " }
+language-servers = ["asm-lsp"]
 
 [[grammar]]
 name = "nasm"
@@ -3062,6 +3064,7 @@ file-types = ["s"]
 injection-regex = "gas"
 comment-token = "#"
 indent = { tab-width = 8, unit = "        " }
+language-servers = ["asm-lsp"]
 
 [[grammar]]
 name = "gas"
@@ -3209,7 +3212,7 @@ indent = { tab-width = 4, unit = "    " }
 
 [[grammar]]
 name = "just"
-source = { git = "https://github.com/poliorcetics/tree-sitter-just", rev = "180bb15d64c63585c4f65c551350048f21987bcb" }
+source = { git = "https://github.com/poliorcetics/tree-sitter-just", rev = "8eddc55e3235d9d87f11b75130857800ec7ba765" }
 
 [[language]]
 name = "gn"
