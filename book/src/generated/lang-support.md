@@ -55,15 +55,17 @@
 | erb | ✓ |  |  |  |
 | erlang | ✓ | ✓ |  | `erlang_ls`, `elp` |
 | esdl | ✓ |  |  |  |
+| fga | ✓ | ✓ | ✓ |  |
 | fidl | ✓ |  |  |  |
 | fish | ✓ | ✓ | ✓ | `fish-lsp` |
 | forth | ✓ |  |  | `forth-lsp` |
 | fortran | ✓ |  | ✓ | `fortls` |
 | fsharp | ✓ |  |  | `fsautocomplete` |
-| gas | ✓ | ✓ |  |  |
+| gas | ✓ | ✓ |  | `asm-lsp` |
 | gdscript | ✓ | ✓ | ✓ |  |
 | gemini | ✓ |  |  |  |
 | gherkin | ✓ |  |  |  |
+| ghostty | ✓ |  |  |  |
 | git-attributes | ✓ |  |  |  |
 | git-commit | ✓ | ✓ |  |  |
 | git-config | ✓ | ✓ |  |  |
@@ -140,7 +142,7 @@
 | mojo | ✓ | ✓ | ✓ | `magic` |
 | move | ✓ |  |  |  |
 | msbuild | ✓ |  | ✓ |  |
-| nasm | ✓ | ✓ |  |  |
+| nasm | ✓ | ✓ |  | `asm-lsp` |
 | nestedtext | ✓ | ✓ | ✓ |  |
 | nginx | ✓ |  |  |  |
 | nickel | ✓ |  | ✓ | `nls` |
@@ -214,6 +216,7 @@
 | tcl | ✓ |  | ✓ |  |
 | teal | ✓ |  |  | `teal-language-server` |
 | templ | ✓ |  |  | `templ` |
+| tera | ✓ |  |  |  |
 | textproto | ✓ | ✓ | ✓ |  |
 | tfvars | ✓ |  | ✓ | `terraform-ls` |
 | thrift | ✓ |  |  |  |
