@@ -8,6 +8,8 @@ use helix_core::Uri;
 use helix_lsp::util::generate_transaction_from_edits;
 use helix_lsp::{lsp, LanguageServerId, OffsetEncoding};
 
+pub struct CopilotRequestCompletionEvent;
+
 #[derive(Debug, PartialEq, Eq, Clone, Copy)]
 pub enum SignatureHelpInvoked {
     Automatic,
