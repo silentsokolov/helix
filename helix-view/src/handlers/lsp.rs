@@ -16,6 +16,7 @@ use helix_lsp::{lsp, LanguageServerId, OffsetEncoding};
 use super::Handlers;
 
 pub struct DocumentColorsEvent(pub DocumentId);
+pub struct CopilotRequestCompletionEvent;
 
 #[derive(Debug, PartialEq, Eq, Clone, Copy)]
 pub enum SignatureHelpInvoked {
