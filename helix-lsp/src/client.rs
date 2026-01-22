@@ -2,7 +2,7 @@ use crate::{
     file_operations::FileOperationsInterest,
     find_lsp_workspace, jsonrpc,
     transport::{Payload, Transport},
-    Call, Error, LanguageServerId, OffsetEncoding, Result,
+    Call, Error, LanguageServerId, OffsetEncoding, Result, copilot_types,
 };
 
 use crate::lsp::{
@@ -1586,5 +1586,19 @@ impl Client {
         self.notify::<lsp::notification::DidChangeWatchedFiles>(lsp::DidChangeWatchedFilesParams {
             changes,
         })
+    }
+
+    pub fn copilot_completion(
+        &self,
+        document: copilot_types::Document,
+    ) -> impl Future<Output = Result<Option<copilot_types::CompletionResponse>>> {
+        let params = copilot_types::CompletionRequestParams { doc: document };
+        let request = self.call::<copilot_types::CompletionRequest>(params);
+
+        async move {
+            let json = request.await?;
+            let response = json;
+            Ok(response)
+        }
     }
 }
