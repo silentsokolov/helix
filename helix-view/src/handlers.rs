@@ -28,6 +28,7 @@ pub struct Handlers {
     pub pull_diagnostics: Sender<lsp::PullDiagnosticsEvent>,
     pub pull_all_documents_diagnostics: Sender<lsp::PullAllDocumentsDiagnosticsEvent>,
     pub code_action_hint: Sender<lsp::CodeActionHintEvent>,
+    pub copilot: Option<Sender<lsp::CopilotRequestCompletionEvent>>,
 }
 
 impl Handlers {
